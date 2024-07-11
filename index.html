@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="assets/css/students.css">
+  <script src="assets/js/students.js" defer></script>
+  <title>Students</title>
+</head>
+<body>
+
+
+  <div class="container">
+
+    <header class="studentHeader" >
+      <h1>Öğrenci Listesi</h1>
+      <button id="addStudentBtn">Öğrenci Ekle</button>
+    </header>
+
+  <table class="studentList" id="studentsContainer"  >
+    <tr> 
+      <th> İsim </th> 
+      <th> Soyisim </th> 
+      <th> Cinsiyet </th> 
+      <th> Bölüm </th> 
+      <th> Rol </th> 
+     </tr>  
+</table>
+
+  <dialog id="modal">
+    <h2 class="modelAddNew">Öğrenci Ekle</h2>
+    <h2 class="modelEdit"></h2>
+  <form  method="dialog" autocomplete="off" id="studentForm">
+    <input required type="text" name="name" placeholder="isim"/>
+    <input required type="text" name="lname" placeholder="Soyisim"/>
+    <div class="genderBox">
+      <div class="radioBorder">
+        <input  required  type="radio" id="gender" name="gender" value="kadın" /><label>Kadın</label></div>
+      <div class="radioBorder">
+        <input required  type="radio" id="gender" name="gender" value="erkek" /><label>Erkek</label></div>
+    </div>
+    <input required type="text" name="section" placeholder="Bölümünüzü giriniz"/>
+    <input required type="text" name="role" placeholder="Rolünüzü giriniz"/>
+    <button class="modelAddNew">Ekle</button> 
+    <button  class="modelEdit">Düzenle</button>
+    <button class="exit" type="button" onclick="studentForm.reset();modal.close();">Vazgeç</button></p>
+    <input type="hidden" name="id" value="">
+  </form>
+</dialog>
+
+  </div>
+</body>
+</html>

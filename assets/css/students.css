@@ -1,0 +1,211 @@
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #f0f0f0;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.studentHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.studentHeader h1 {
+  font-size: 24px;
+  margin: 0;
+}
+
+.studentHeader button {
+  background-color: #28a745;
+  border: none;
+  color: white;
+  padding: 10px 15px;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 18px;
+}
+
+.studentList {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+
+.studentList tr {
+  padding: 10px;
+  text-align: left;
+  border: 1px solid #ddd;
+}
+
+.studentList th {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 10px;
+  text-align: left;
+  border: 1px solid #ddd;
+}
+.studentList td {
+  padding: 10px;
+  text-align: left;
+  border: 1px solid #ddd;
+}
+
+.studentList th {
+  background-color: #f2f2f2;
+}
+
+.student {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+}
+
+
+.studentEditControls {
+  display: flex;
+  gap: 10px;
+}
+
+.studentEditBtn, .studentDeleteBtn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+
+.studentEditBtn svg  {
+  width: 20px;
+  height: 20px;
+  fill: #ffc107;
+}
+.studentDeleteBtn svg {
+  width: 20px;
+  height: 20px;
+  fill: #dc3545;
+}
+
+#modal {
+  max-width: 800px;
+  padding: 40px;
+  background-color: white;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#modal h2 {
+  margin: 0 0 10px;
+}
+
+#studentForm {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+#studentForm input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 100%;
+}
+
+.genderBox {
+  display: flex;
+  gap: 10px;
+}
+
+.radioBorder {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+#studentForm button {
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#studentForm .modelAddNew {
+  background-color: #28a745;
+  color: white;
+}
+
+#studentForm .modelEdit {
+  background-color: #ffc107;
+  color: white;
+}
+
+#studentForm .exit {
+  background-color: #dc3545;
+  color: white;
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 10px;
+  }
+
+  .studentHeader h1 {
+    font-size: 20px;
+  }
+
+  .studentHeader button {
+    font-size: 16px;
+    padding: 8px 12px;
+  }
+
+  #studentForm input[type="text"], #studentForm input[type="radio"] {
+    font-size: 14px;
+  }
+
+  #studentForm button {
+    font-size: 14px;
+    padding: 8px;
+  }
+}
+
+@media (max-width: 480px) {
+  .studentHeader {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .studentHeader h1 {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+
+  .studentHeader button {
+    font-size: 14px;
+    padding: 6px 10px;
+  }
+
+  #studentForm input {
+    font-size: 12px;
+  }
+
+  #studentForm button {
+    font-size: 12px;
+    padding: 6px;
+  }
+
+  .genderBox {
+    flex-direction: column;
+  }
+}
